@@ -1,0 +1,40 @@
+.pageContainer{
+    display:grid;
+    grid-template-columns: 200px 750px;
+    grid-template-rows: 100px 500px;
+    font-family: 'Roboto', sans-serif;
+    grid-template-areas: "sidebar header" 
+    "sidebar mainContent" 
+    "sidebar mainContent"
+}
+
+.sidebar{
+    grid-area:sidebar;
+    background-color: #1992d4;
+}
+
+.header{
+    grid-area:header;
+    background-color: #ffffff;
+}
+
+.mainContent{
+    grid-area:mainContent;
+    background-color: #e2e8f0;
+    display:grid;
+    grid-template-columns: 500px 250px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "projects announcements"
+    "projects trending"
+}
+
+.projects{
+    grid-area: projects;
+}
+.announcements{
+    grid-area: announcements;
+}
+
+.trending{
+    grid-area: trending;
+}
