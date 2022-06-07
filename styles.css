@@ -1,7 +1,7 @@
 .pageContainer{
     display:grid;
-    grid-template-columns: 200px 750px;
-    grid-template-rows: 100px 500px;
+    grid-template-columns: repeat(1, 250px) repeat(1, minMax(500px, 3fr));
+    grid-template-rows: repeat(1, 150px) repeat(1,max(80vh));
     font-family: 'Roboto', sans-serif;
     grid-template-areas: "sidebar header" 
     "sidebar mainContent" 
@@ -11,25 +11,91 @@
 .sidebar{
     grid-area:sidebar;
     background-color: #1992d4;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas:"dashboard" "sidebarOne" "sidebarTwo"
+}
+
+.dashboard{
+    grid-area:dashboard;
+}
+
+.sidebarOne{
+    grid-area:sidebarOne;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.sidebarTwo{
+    grid-area:sidebarTwo;
+    display:grid;
+    grid-template-rows: 1fr;  
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .header{
     grid-area:header;
     background-color: #ffffff;
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(1,2fr) repeat(1,1fr);
+    grid-template-areas:"searchbar topRight"
+    "greeting bottomRight"
 }
+
+.searchbar{
+    grid-area:searchbar;
+    display:flex;
+}
+
+.topRight{
+    grid-area:topRight;
+    display:flex;
+}
+
+.greeting{
+    grid-area:greeting;
+    display:flex;
+}
+
+.bottomRight{
+    grid-area: bottomRight;
+    display:flex;
+}
+
 
 .mainContent{
     grid-area:mainContent;
     background-color: #e2e8f0;
     display:grid;
-    grid-template-columns: 500px 250px;
-    grid-template-rows: 250px 250px;
-    grid-template-areas: "projects announcements"
+    grid-template-columns: repeat(1,3fr) repeat(1,1fr);
+    grid-template-rows: 50px 5fr 1fr 5fr;
+    grid-template-areas: 
+    "contentHeader contentHeader"
+    "projects announcements"
+    "projects trendingHeader"
     "projects trending"
+}
+
+.contentHeader{
+ grid-area:contentHeader;
+ display:grid;
+ grid-template-columns: repeat(1,3fr) repeat(1,1fr);
+}
+
+.trendingHeader{
+grid-area:trendingHeader;
+ display:grid;
+ grid-template-columns: repeat(1,3fr) repeat(1,1fr);
 }
 
 .projects{
     grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(3, 1fr)
 }
 .announcements{
     grid-area: announcements;
