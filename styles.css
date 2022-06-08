@@ -17,21 +17,20 @@
     font-weight:bold;
     display:flex;
     flex-direction:column;
+
 }
 
 .dashboard{
     padding:25px;
     font-size:30px;
-    display:flex;
-
+    display:flex;    
 }
 
 .sidebarOne, .sidebarTwo{
     padding:25px;
     font-size:20px;
     display:flex;    
-    flex-direction:row;
-    
+    flex-direction:row;    
 }
 
 .logosOne, .logosTwo{
@@ -55,10 +54,42 @@
     grid-area:header;
     background-color: #ffffff;
     display:grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(1,2fr) repeat(1,1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas:"searchbar topRight"
     "greeting bottomRight"
+}
+
+.greeting{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "greetingImage topGreeting"
+    "greetingImage bottomGreeting"
+}
+
+.greetingImage{
+    grid-area:greetingImage;
+}
+
+.topGreeting{
+    grid-area:topGreeting;
+    margin-top:15px;
+    font-size:12px;
+    font-weight:bold;
+    position:absolute;
+    top:80px;
+    left:375px;
+}
+
+.bottomGreeting{
+    grid-area:bottomGreeting;
+    font-size:23px;
+    font-weight:bolder;
+    position:absolute;
+    top:110px;
+    left:375px;
 }
 
 .searchbar{
@@ -77,14 +108,11 @@
     
 }
 
-.greeting{
-    grid-area:greeting;
-    display:flex;
-}
-
 .bottomRight{
     grid-area: bottomRight;
     display:flex;
+    position:relative;
+    top:40px;
 }
 
 
