@@ -10,101 +10,230 @@
 <body>
 <div class="pageContainer">
     <div class="sidebar">
-        <div class="dashboard">Dashboard</div>
+        <div class="dashboard">
+            <img src="Icons/dashboard.png" style="height:25px;width:25px;margin-right:10px;">
+            <div>Dashboard</div>
+        </div>
         <div class="sidebarOne">
             <div class="logosOne">
-                <img src="Icons/home.png">
-                <img src="Icons/profile.png">
-                <img src="Icons/messages.png">
-                <img src="Icons/history.png">
-                <img src="Icons/tasks.png">
-                <img src="Icons/communities.png">
+                <img src="Icons/home.png" style="padding-bottom:10px">
+                <img src="Icons/profile.png" style="padding-bottom:10px">
+                <img src="Icons/messages.png" style="padding-bottom:10px">
+                <img src="Icons/history.png" style="padding-bottom:10px">
+                <img src="Icons/tasks.png" style="padding-bottom:10px">
+                <img src="Icons/communities.png" style="padding-bottom:10px">
             </div>
-            <div class="sidebarOneList">
-                <div>Home</div>
-                <div>Profile</div>
-                <div>Messages</div>
-                <div>History</div>
-                <div>Tasks</div>
-                <div>Communities</div>                
+            <div>
+                <div class="sidebarOneList">Home</div>
+                <div class="sidebarOneList">Profile</div>
+                <div class="sidebarOneList">Messages</div>
+                <div class="sidebarOneList">History</div>
+                <div class="sidebarOneList">Tasks</div>
+                <div class="sidebarOneList">Communities</div>                
             </div>
         </div>
         <div class="sidebarTwo">
             <div class="logosTwo">
-                <img src="Icons/settings.png">
-                <img src="Icons/support.png">
-                <img src="Icons/privacy.png">
+                <img src="Icons/settings.png" style="padding-bottom:10px">
+                <img src="Icons/support.png" style="padding-bottom:10px">
+                <img src="Icons/privacy.png" style="padding-bottom:10px">
             </div>
-            <div class="sidebarTwoList">
-                <div>Settings</div>
-                <div>Support</div>
-                <div>Privacy</div>
+            <div>
+                <div class="sidebarTwoList">Settings</div>
+                <div class="sidebarTwoList">Support</div>
+                <div class="sidebarTwoList">Privacy</div>
             </div>
         </div>
     </div>
     <div class="header">
-        <div class="searchbar">
-            <div>search logo</div>
-            <div>searchbar</div>
+        <div class="searchBar">
+            <img src="Icons/search.svg" style="height:25px;">
+            <form id="myform" method="get" action="#">
+                <input class="searchText" type="text" id="searchresult" name="searchresult" value=""><br><br>
+            </form>
         </div>
         <div class="topRight">
-            <div>notification logo</div>
-            <div>small prof pic</div>
-            <div>your name here</div>
+            <img src="Icons/notification.svg" style="height:25px; margin-right:15px;">
+            <img src="Icons/trending-3.png" style="height:25px; border-radius:50%; margin-right:15px; ">
+            <div style="margin-top:5px;">Ken Dillon</div>
         </div>
         <div class="greeting">
-            <div>larger prof pic</div>
+            <img src="Icons/trending-3.png" style="height:35px; border-radius:50%">
             <div>Hi there,</div>
-            <div>your name here and twitter @</div>
+            <div>Ken Dillon @kendall</div>
         </div>
         <div class="bottomRight">
-            <div>new</div>
-            <div>upload</div>
-            <div>share</div>
+            <button class="button">New</button>
+            <button class="button">Upload</button>
+            <button class="button">Share</button>
         </div>
     </div>
     <div class="mainContent">
-        <div class="contentHeader">
-            <div>Your Projects</div>
-            <div>Announcements</div>
-        </div>
+        
+        <div class="projectHeader">Your Projects</div>
+        <div class="announcementHeader">Announcements</div>
+        
         <div class="projects">
             <div class="card">
                 <div class="cardHeader">Super Cool Project</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <div class="cardHeader">Less Cool Project</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <div class="cardHeader">Impossible App</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>            
             </div>
             <div class="card">
                 <div class="cardHeader">Easy Peasy App</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <div class="cardHeader">Ad Blocker</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>    
             </div>
             <div class="card">
                 <div class="cardHeader">Money Maker</div>
                 <div class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="iconContainer">
+                    <div class="cardIcon">
+                        <img src="Icons/star.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/eye.svg">
+                    </div>
+                    <div class="cardIcon">
+                        <img src="Icons/share.svg">
+                    </div>
+                </div>   
             </div>
         </div>
-        <div class="announcements">this is the place where announcements go</div>
+        <div class="announcements">
+            <div class="announcementCard">
+                <div class="announcementOne">
+                    <div class="announcementTitle">Site Maintenance</div>
+                    <div class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <hr>
+                </div>
+                
+                <div class="announcementTwo">
+                    <div class="announcementTitle">Community Share Day</div>
+                    <div class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <hr>
+                </div>
+                
+                <div class="announcementThree">
+                    <div class="announcementTitle">Updated Privacy Policy</div>
+                    <div class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="trendingHeader">
             <div>Trending</div>
         </div>
-        <div class="trending">this is the place where trending stuff goes</div>
+        <div class="trending">
+            <div class="trendingCard">
+                <div class="trendingOne">
+                    <div class="trendingImageOne trendingImage">
+                        <img src="Icons/trending-1.png" style="width:50px;border-radius:50%">
+                    </div>
+                    <div class="trendingTagOne trendingTag">@tegan</div>
+                    <div class="trendingSubtextOne trendingSubtext">World Peace Builder</div>
+                </div>
+                <div class="trendingTwo">
+                    <div class="trendingImageTwo trendingImage">
+                        <img src="Icons/trending-2.png" style="width:50px;border-radius:50%">
+                    </div>
+                    <div class="trendingTagTwo trendingTag">@morgan</div>
+                    <div class="trendingSubtextTwo trendingSubtext">Super Cool Project</div>
+                </div>
+                <div class="trendingThree">
+                    <div class="trendingImageThree trendingImage">
+                        <img src="Icons/trending-3.png" style="width:50px;border-radius:50%">
+                    </div>
+                    <div class="trendingTagThree trendingTag">@kendall</div>
+                    <div class="trendingSubtextThree trendingSubtext">Life Changing App</div>
+                </div>
+                <div class="trendingFour">
+                    <div class="trendingImageFour trendingImage">
+                        <img src="Icons/trending-4.jpeg" style="width:50px;border-radius:50%">
+                    </div>
+                    <div class="trendingTagFour trendingTag">@alex</div>
+                    <div class="trendingSubtextFour trendingSubtext">No Traffic Maker</div>
+                </div>
+
+            </div>
+            
+        </div>
     </div>    
 </div>   
 </body>

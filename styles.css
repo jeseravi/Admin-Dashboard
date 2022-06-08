@@ -1,7 +1,9 @@
+
+
 .pageContainer{
     display:grid;
     grid-template-columns: repeat(1, 250px) repeat(1, minMax(500px, 3fr));
-    grid-template-rows: repeat(1, 150px) repeat(1,max(80vh));
+    grid-template-rows: repeat(1, 150px) repeat(1,100vh);
     font-family: 'Roboto', sans-serif;
     grid-template-areas: "sidebar header" 
     "sidebar mainContent" 
@@ -11,28 +13,42 @@
 .sidebar{
     grid-area:sidebar;
     background-color: #1992d4;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr 1fr 1fr;
-    grid-template-areas:"dashboard" "sidebarOne" "sidebarTwo"
+    color:white;
+    font-weight:bold;
+    display:flex;
+    flex-direction:column;
 }
 
 .dashboard{
-    grid-area:dashboard;
+    padding:25px;
+    font-size:30px;
+    display:flex;
+
 }
 
-.sidebarOne{
-    grid-area:sidebarOne;
-    display:grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(6, 1fr);
+.sidebarOne, .sidebarTwo{
+    padding:25px;
+    font-size:20px;
+    display:flex;    
+    flex-direction:row;
+    
 }
 
-.sidebarTwo{
-    grid-area:sidebarTwo;
-    display:grid;
-    grid-template-rows: 1fr;  
-    grid-template-columns: repeat(3, 1fr);
+.logosOne, .logosTwo{
+    display:flex;
+    flex-direction:column;
+    padding-right:25px;
+}
+
+.sidebarOneList, .sidebarTwoList{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:11px;
+}
+
+.sidebarOneList:hover, .sidebarTwoList:hover{
+    cursor:pointer;
+    transform: scale(1.07)
 }
 
 .header{
@@ -48,11 +64,17 @@
 .searchbar{
     grid-area:searchbar;
     display:flex;
+    
 }
 
 .topRight{
     grid-area:topRight;
     display:flex;
+    margin-left:auto;
+    margin-right:25px;
+    margin-top:15px;
+    font-weight:bold;
+    
 }
 
 .greeting{
@@ -72,10 +94,10 @@
     padding-top:25px;
     padding-left:20px;
     display:grid;
-    grid-template-columns: repeat(1,3fr) repeat(1,1fr);
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 35px 5fr 1fr 5fr 35px;
     grid-template-areas: 
-    "contentHeader contentHeader"
+    "projectHeader announcementHeader"
     "projects announcements"
     "projects trendingHeader"
     "projects trending"
@@ -86,21 +108,24 @@
     grid-area:footer;
 }
 
-.contentHeader{
- grid-area:contentHeader;
- display:grid;
- grid-template-columns: minMax(460px,3fr) 1fr;
+.projectHeader{
+ grid-area:projectHeader;
  margin-top:auto;
  margin-bottom:10px;
  font-weight:bold;
  font-size:20px;
- 
+}
+
+.announcementHeader{
+ grid-area:announcementHeader;
+ margin-top:auto;
+ margin-bottom:10px;
+font-weight:bold;
+ font-size:20px;
 }
 
 .trendingHeader{
  grid-area:trendingHeader;
- display:grid;
- grid-template-columns: 3fr 1fr;
  margin-top:auto;
  margin-bottom:10px;
  font-weight:bold;
@@ -114,13 +139,16 @@
     grid-template-rows:repeat(3, 1fr);
     gap: 25px;
     padding-right:20px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
 }
 
 .card{
-    min-height: 133px;
+    min-height:200px;
     min-width:200px;
-    max-height:1fr;
-    max-width: 1fr;
+    max-height:300px;
+    max-width:300px;
     border-radius:8px;
     background-color:white;
     border-left:7px solid #e2e8f0;
@@ -129,23 +157,249 @@
     padding-left:20px;
     padding-right:50px;
     box-shadow:2px 2px 2px 2px #ccd1d8;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:1fr 3fr 1fr;
+    grid-template-areas: 
+    "cardHeader cardHeader"
+    "cardText cardText"
+    ". iconContainer"
 }
 
 .cardHeader{
- font-weight:bold;
- font-size:17px;
-}
-
+    font-weight:bold;
+    font-size:17px;
+    grid-area: cardHeader;
+    margin-top:auto;
+    margin-bottom:5px;
+   }
+   
 .cardText{
-color: #a2a2a2;
+    color: #a2a2a2;
+    grid-area: cardText;
+    }
+    
+.iconContainer{
+    grid-area:iconContainer;
+    display:flex;
+    justify-content: end;
 }
 
-.announcements{
+.cardIcon{
+    padding-left:30px;
+    margin-top:-10px;
+    margin-right:-10px;
+}
+
+.announcementCard{
     grid-area: announcements;
+    border-radius:8px;
+    background-color:white;
+    padding-top:25px;
+    padding-left:20px;
+    padding-right:50px;
+    height:100%;
+    box-shadow:2px 2px 2px 2px #ccd1d8;
+    display:grid;
+    margin-right:25px;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "announcementOne"
+    "announcementTwo"
+    "announcementThree"
 }
 
-.trending{
-    grid-area: trending;
+hr {
+    margin: 25px 0 25px 0;
+}
+
+.announcementOne{
+    grid-area:announcementOne;
+}
+
+.announcementTwo{
+    grid-area:announcementTwo;
+}
+
+.announcementThree{
+    grid-area:announcementThree;
+}
+
+.announcementTitle {
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.announcementText {
+    font-size:12px;
+    color:#a2a2a2;
+
+}
+    
+
+img:hover{
+    
+    cursor:pointer;
+    transform: scale(1.07);
     
 }
 
+.trending{
+    grid-area:trending;
+    margin-bottom:50px;
+}
+
+.trendingCard{
+    border-radius:8px;
+    background-color:white;
+    padding-top:25px;
+    padding-left:20px;
+    padding-right:50px;
+    margin-bottom:-50px;
+    height:100%;
+    box-shadow:2px 2px 2px 2px #ccd1d8;
+    display:grid;
+    margin-right:25px;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "trendingOne"
+    "trendingTwo"
+    "trendingThree"
+    "trendingFour"
+}
+
+.trendingSubtext {
+    font-size:10px;
+    color:#a2a2a2;
+    margin-left:10px;
+    margin-top:0px;
+}
+
+.trendingTag{
+    font-size:12px;
+    font-weight:bold;
+    color:black;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.trendingOne{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "trendingImageOne trendingTagOne"
+    "trendingImageOne trendingSubtextOne"
+}
+
+.trendingImageOne{
+    grid-area:trendingImageOne;
+}
+
+.trendingTagOne{
+    grid-area:trendingTagOne;
+}
+
+.trendingSubtextOne{
+    grid-area:trendingSubtextOne;
+}
+
+.trendingTwo{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "trendingImageTwo trendingTagTwo"
+    "trendingImageTwo trendingSubtextTwo"
+}
+
+.trendingImageTwo{
+    grid-area:trendingImageTwo;
+}
+
+.trendingTagTwo{
+    grid-area:trendingTagTwo;
+}
+
+.trendingSubtextTwo{
+    grid-area:trendingSubtextTwo;
+}
+
+.trendingThree{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "trendingImageThree trendingTagThree"
+    "trendingImageThree trendingSubtextThree"
+}
+
+.trendingImageThree{
+    grid-area:trendingImageThree;
+}
+
+.trendingTagThree{
+    grid-area:trendingTagThree;
+}
+
+.trendingSubtextThree{
+    grid-area:trendingSubtextThree;
+}
+
+.trendingFour{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "trendingImageFour trendingTagFour"
+    "trendingImageFour trendingSubtextFour"
+}
+
+.trendingImageFour{
+    grid-area:trendingImageFour;
+}
+
+.trendingTagFour{
+    grid-area:trendingTagFour;
+}
+
+.trendingSubtextFour{
+    grid-area:trendingSubtextFour;
+}
+
+.button{
+    background-color:#1992d4 ;
+    border:1px solid #1992d4;
+    border-radius:10px;
+    height:25px;
+    color:white;
+    margin-left: 10px;
+    font-size:15px;
+    padding-left:20px;
+    padding-right:20px;
+    font-weight: 500
+}
+
+.button:hover{
+    cursor:pointer;
+    transform: scale(1.07)
+}
+
+.searchBar {
+    display: flex;
+    padding: 17px 0px 0px 30px;
+}
+
+.searchText {
+    padding-left: 10px;
+    width: 40vw;
+    max-width: 500px;
+    height: 25px;
+    background-color: rgba(226,232,240,255);
+    border: none;
+    border-radius: 15px;
+
+}
